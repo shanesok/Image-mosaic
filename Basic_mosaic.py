@@ -2,9 +2,6 @@ import numpy as np
 from PIL import Image
 import os
 
-
-
-
 def main():
     n=5
     path_input_image = "./Pikachu.jpg"
@@ -69,7 +66,6 @@ def process_kernel(I, n, width, height):
             b = sum(p[2] for p in pixels) // len(pixels)
             kernel.append((kernel_img, [r, g, b]))
     return kernel
-
 
 def process_database(path_database):
     database = []
