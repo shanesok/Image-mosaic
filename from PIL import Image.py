@@ -3,10 +3,10 @@ from PIL import Image
 import os
 
 
-best_img = []
+
 
 def main():
-    n=10
+    n=5
     path_input_image = "./Pikachu.jpg"
     path_database = "./bart_simpson"
     path_output = "./output.png"
@@ -26,7 +26,7 @@ def write_best_to_output(best_db_img, output, n, width, height):
             left = i * 28
             upper = j * 28
             box = (left, upper)
-            db_img = load_image(best_img[index])
+            db_img = load_image(best_db_img[index])
             db_img_resized = db_img.resize((28, 28))
             output.paste(db_img_resized, box)
             index += 1
@@ -36,6 +36,7 @@ def create_empty_image(width, height, n):
     return ouput
 
 def compare_kernel2ranklist(rankl_list, kernel_avg):
+    best_img = []
     for i in range(len(kernel_avg)):
         R1, G1, B1 = abs(kernel_avg[i][1][0] - rankl_list[0][1][0]), abs(kernel_avg[i][1][1] - rankl_list[0][1][1]), abs(kernel_avg[i][1][2] - rankl_list[0][1][2])
         smallest_diff = R1+G1+B1
@@ -47,6 +48,7 @@ def compare_kernel2ranklist(rankl_list, kernel_avg):
                 smallest_diff = current_diff
                 best_img_val = rankl_list[j][0]
         best_img.append(best_img_val)
+    return best_img
 
 def process_kernel(I, n, width, height):
     kernel = []
