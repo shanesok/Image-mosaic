@@ -14,4 +14,4 @@ Turn any image into a mosaic made of smaller pictures — built with Python and 
 ## 📸 Example
 | Original | Mosaic Output |
 |-----------|---------------|
-| ![original](Pikachu.jpg) | ![mosaic](output.png) |
+| ![original](/Pikachu.jpg) | ![mosaic](output.png) |
