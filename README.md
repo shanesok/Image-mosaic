@@ -1,2 +1,2 @@
 # Image-mosaic
-make a mosaic image based on an initial image
+Turn any image into a mosaic made of smaller pictures — built with Python and Pillow (PIL).
