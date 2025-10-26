@@ -5,7 +5,7 @@ Turn any image into a mosaic made of smaller pictures — built with Python and 
 - Uses average color matching to pick the best tiles
 - Adjustable grid size (n x n)
 - Works with any image folder as a database
-## 🧩 Installation
+## Installation
 
 1. Clone the repo:
    ```bash
@@ -21,17 +21,17 @@ Turn any image into a mosaic made of smaller pictures — built with Python and 
    ```bash
    python Basic_mosaic.py -i Pikachu.jpg -n 20 -o output.png
 
-## 📸 Example
+## Example
 | Original | Mosaic Output |
 |-----------|---------------|
 | ![original](/Pikachu.jpg) | ![mosaic](output.png) |
-## 🧠 How It Works
+## How It Works
 1. The program splits the input image into small kernels.
 2. It calculates the average RGB color of each kernel.
 3. It compares each kernel color to the average colors of all database images.
 4. The best match replaces that region in the final mosaic.
 
-## 🧠 What I Learned
+## What I Learned
 - How to use NumPy arrays for image processing
 - Basics of command-line interfaces with argparse
 - Efficient looping and color averaging
